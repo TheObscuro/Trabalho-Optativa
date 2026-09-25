@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f4ef" />
+  <meta name="description" content="Duas experiências para observar criticamente como informação, publicidade e algoritmos participam das nossas decisões." />
+  <title>Hub Conecta — Consciência digital em prática</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['DM Sans','sans-serif'], display: ['Manrope','sans-serif'], mono: ['DM Mono','monospace'] } } } }
+  </script>
+  <style>
+    :root{--paper:#f6f4ef;--ink:#1e2825;--muted:#777e77;--line:#e7e4dc;--cyan:#52e0da;--coral:#ff765e;--serif:Georgia,'Times New Roman',serif;--ease:cubic-bezier(.23,1,.32,1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}button{font:inherit}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #4788ff;outline-offset:3px}::selection{background:#b8efe9;color:#153d3b}.hidden{display:none!important}
+    .brand-mark{width:31px;height:31px;display:grid;place-items:center;border-radius:11px;background:#283631;color:#b8f1df}.topbar{position:sticky;top:0;z-index:30;background:rgba(246,244,239,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(35,45,40,.09)}.nav-scroll{scrollbar-width:none}.nav-scroll::-webkit-scrollbar{display:none}.nav-link{white-space:nowrap;transition:color .18s ease,background .18s ease}.nav-link[aria-current="page"]{background:#e9e7df;color:#16251e}.paper-grid{background-image:linear-gradient(to right,rgba(45,65,55,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(45,65,55,.035) 1px,transparent 1px);background-size:34px 34px}.hero-title{font-family:'Manrope',sans-serif;letter-spacing:-.075em;line-height:.96}.serif{font-family:var(--serif);font-style:italic}.topic-card{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}.topic-card:hover{transform:translateY(-5px);box-shadow:0 24px 55px rgba(35,45,40,.1)}.topic-one{background:#111b20;color:#f1f5f1}.topic-two{background:#ff795f;color:#2d201b}.topic-art{min-height:210px;position:relative;overflow:hidden}.topic-art:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,.22),transparent 43%);pointer-events:none}.case-window{background:linear-gradient(145deg,#17242b,#0d1519);border:1px solid rgba(117,237,231,.22);box-shadow:0 24px 70px rgba(2,11,14,.32)}.grain{position:relative;isolation:isolate}.grain:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E")}.clue-card{transition:border-color .2s ease,background .2s ease}.clue-blur{filter:blur(5px);user-select:none;transition:filter .28s var(--ease)}.clue-card.is-open .clue-blur{filter:none;user-select:text}.decision-btn,.choice-btn,.factor-chip,.reason-btn{transition:transform .16s var(--ease),border-color .18s ease,background .18s ease,box-shadow .18s ease}.decision-btn:active,.choice-btn:active,.factor-chip:active,.reason-btn:active,.primary-btn:active{transform:scale(.975)}.decision-btn.is-selected{border-color:#55d6cf;background:rgba(72,210,202,.13);color:#aef5ee}.audit-bg{background-color:#111a1e;background-image:radial-gradient(ellipse at 90% 10%,rgba(20,170,174,.1),transparent 34%),radial-gradient(ellipse at 10% 60%,rgba(33,68,81,.15),transparent 42%)}.audit-paper{background:#f1f3ee;color:#1b2522}.audit-panel{background:rgba(25,37,42,.9);border:1px solid rgba(191,224,218,.12);box-shadow:0 18px 54px rgba(0,0,0,.18)}.audit-muted{color:#a5b2ad}.mono-label{font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase}.social-bg{background:radial-gradient(circle at 93% 7%,rgba(255,157,87,.15),transparent 28%),#f6f1e9}.phone-shell{background:#191e1d;box-shadow:0 24px 70px rgba(30,35,30,.18)}.feed-scroll{scrollbar-width:thin;scrollbar-color:#d8d2c7 transparent}.feed-scroll::-webkit-scrollbar{width:5px}.feed-scroll::-webkit-scrollbar-thumb{background:#d8d2c7;border-radius:99px}.feed-tile{border:1px solid #ece8df;background:#fffdf9}.step-dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}.step-dot.on{background:#ff765e;color:#fff}.step-dot.done{background:#24362f;color:#c8f0dc}.soft-shadow{box-shadow:0 12px 34px rgba(33,39,32,.06)}.check-row input,.factor-row input{accent-color:#ff765e;width:17px;height:17px}.pulse-dot{box-shadow:0 0 0 5px rgba(255,118,94,.14)}.tape{transform:rotate(-4deg)}.asset-img{display:block;width:100%;height:100%;object-fit:cover}.transition-in{animation:rise .35s var(--ease) both}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:640px){.topic-art{min-height:170px}.hero-title{letter-spacing:-.065em}.nav-link{font-size:12px}.case-window{border-radius:26px!important}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[70px] flex items-center justify-between gap-4">
+      <button data-view="home" class="flex items-center gap-2.5 shrink-0 rounded-xl" aria-label="Ir para o Hub Conecta">
+        <span class="brand-mark" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.7" stroke="currentColor" stroke-width="1.7"/><path d="M3.6 12h16.8M12 3.3c2.2 2.3 3.3 5.2 3.3 8.7s-1.1 6.4-3.3 8.7c-2.2-2.3-3.3-5.2-3.3-8.7s1.1-6.4 3.3-8.7Z" stroke="currentColor" stroke-width="1.35"/></svg></span>
+        <span class="font-display font-extrabold text-[15px] tracking-tight">Hub <span class="text-emerald-700">Conecta</span></span>
+      </button>
+      <nav class="nav-scroll flex items-center gap-1 overflow-x-auto" aria-label="Navegação principal">
+        <button data-view="home" class="nav-link rounded-full px-3 py-2 text-[13px] font-semibold text-stone-500" aria-current="page">Início</button>
+        <button data-view="theme1" class="nav-link rounded-full px-3 py-2 text-[13px] font-semibold text-stone-500">🔎 <span class="hidden sm:inline">Tema 1:</span> Confiável ou viral?</button>
+        <button data-view="theme2" class="nav-link rounded-full px-3 py-2 text-[13px] font-semibold text-stone-500">📱 <span class="hidden sm:inline">Tema 2:</span> Escolha ou influência?</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HUB -->
+    <section id="view-home" class="view">
+      <div class="paper-grid overflow-hidden">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 pt-14 sm:pt-20 pb-12 sm:pb-16">
+          <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-12 lg:gap-16 items-end">
+            <div class="max-w-3xl">
+              <div class="inline-flex items-center gap-2 rounded-full bg-white/75 border border-stone-200 px-3 py-1.5 mb-7 text-[11px] tracking-[.14em] uppercase font-semibold text-stone-500">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 pulse-dot"></span> Um laboratório de escolhas cotidianas
+              </div>
+              <h1 class="hero-title text-[clamp(3.4rem,9vw,7.1rem)] font-extrabold">O que é seu.<br /><span class="serif text-emerald-800 font-normal">O que te move?</span></h1>
+              <p class="mt-7 max-w-xl text-[16px] sm:text-lg leading-7 text-stone-600">Uma pausa para observar como posts, publicidade e algoritmos participam das decisões que parecem só nossas.</p>
+            </div>
+            <div class="lg:pb-2">
+              <div class="rounded-[26px] border border-stone-200/80 bg-white/75 p-5 sm:p-6 soft-shadow">
+                <div class="flex items-center justify-between gap-3">
+                  <div><p class="mono-label text-[10px] text-stone-400">Dois percursos · um convite</p><p class="mt-1 font-display text-[19px] font-bold tracking-tight">Investigue. Perceba. Reflita.</p></div>
+                  <span class="rounded-full bg-[#edf4ed] px-3 py-1 text-[11px] font-semibold text-emerald-800">Sem respostas certas</span>
+                </div>
+                <div class="mt-5 flex items-center gap-2">
+                  <div class="h-1.5 flex-1 rounded-full bg-emerald-700"></div><div class="h-1.5 flex-1 rounded-full bg-cyan-300"></div><div class="h-1.5 flex-1 rounded-full bg-orange-400"></div>
+                </div>
+                <div class="mt-4 flex justify-between text-[11px] font-medium text-stone-500"><span>Informação</span><span>Ambiente</span><span>Autonomia</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-14 sm:mt-20 flex items-center justify-between gap-4 border-t border-stone-300/70 pt-5">
+            <p class="mono-label text-[10px] sm:text-[11px] text-stone-500">Escolha uma experiência para começar</p>
+            <span class="text-[11px] text-stone-400">Você pode trocar de tema a qualquer momento ↘</span>
+          </div>
+          <div class="mt-5 grid lg:grid-cols-2 gap-5 sm:gap-6">
+            <button data-view="theme1" class="topic-card topic-one text-left rounded-[28px] overflow-hidden group">
+              <div class="topic-art grain p-6 sm:p-8 flex items-center justify-between gap-4">
+                <div class="relative z-10 max-w-[320px]">
+                  <span class="mono-label text-[10px] text-cyan-300/80">01 / Auditoria de informação</span>
+                  <h2 class="mt-4 font-display font-extrabold tracking-[-.06em] text-[34px] sm:text-[42px] leading-[1.02]">Confiável<br /><span class="text-cyan-300">ou viral?</span></h2>
+                  <p class="mt-3 max-w-xs text-[13px] leading-5 text-slate-300">Uma investigação em seis pistas sobre posts, promessas e fontes.</p>
+                </div>
+                <div class="relative z-10 mr-2 sm:mr-6 w-[90px] h-[90px] sm:w-[125px] sm:h-[125px] rounded-[28px] border border-cyan-200/20 bg-cyan-300/10 grid place-items-center text-cyan-200 group-hover:rotate-[-7deg] transition-transform duration-300" aria-hidden="true">
+                  <svg width="58" height="58" viewBox="0 0 48 48" fill="none"><circle cx="20.5" cy="20.5" r="12.5" stroke="currentColor" stroke-width="2.3"/><path d="m30 30 10 10M15 21h11M20.5 15.5v11" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><path d="M33 8h7v7" stroke="#f6cb6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <div class="px-6 sm:px-8 py-4 flex items-center justify-between border-t border-white/10">
+                <span class="text-[12px] font-medium text-slate-300">Ciência da computação × saúde e estética</span><span class="h-8 w-8 rounded-full grid place-items-center bg-white/10 text-cyan-200 group-hover:translate-x-1 transition-transform">↗</span>
+              </div>
+            </button>
+            <button data-view="theme2" class="topic-card topic-two text-left rounded-[28px] overflow-hidden group">
+              <div class="topic-art grain p-6 sm:p-8 flex items-center justify-between gap-4">
+                <div class="relative z-10 max-w-[320px]">
+                  <span class="mono-label text-[10px] text-[#603b2b]/70">02 / Experiência de feed</span>
+                  <h2 class="mt-4 font-display font-extrabold tracking-[-.06em] text-[34px] sm:text-[42px] leading-[1.02]">Escolha<br /><span class="serif font-normal">ou influência?</span></h2>
+                  <p class="mt-3 max-w-xs text-[13px] leading-5 text-[#593c31]/85">Observe o que muda quando o algoritmo entra na conversa.</p>
+                </div>
+                <div class="relative z-10 mr-2 sm:mr-6 w-[90px] h-[90px] sm:w-[125px] sm:h-[125px] rounded-[30px] border border-white/40 bg-white/30 grid place-items-center text-[#4b3026] group-hover:rotate-[7deg] transition-transform duration-300" aria-hidden="true">
+                  <svg width="57" height="57" viewBox="0 0 48 48" fill="none"><rect x="11" y="5" width="26" height="38" rx="6" stroke="currentColor" stroke-width="2.1"/><path d="M19 10h10M21 37h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 17c-2.7-3-7-1-7 2.5 0 3 7 7.2 7 7.2s7-4.2 7-7.2c0-3.5-4.3-5.5-7-2.5Z" fill="#fff1dc" stroke="currentColor" stroke-width="1.6"/></svg>
+                </div>
+              </div>
+              <div class="px-6 sm:px-8 py-4 flex items-center justify-between border-t border-black/10">
+                <span class="text-[12px] font-medium text-[#603b2b]">Computação × estética e consumo</span><span class="h-8 w-8 rounded-full grid place-items-center bg-white/35 group-hover:translate-x-1 transition-transform">↗</span>
+              </div>
+            </button>
+          </div>
+          <p class="mt-7 text-center text-[11px] text-stone-400">Experiências educativas. As pontuações registram pistas e fatores percebidos — nunca escolhas de consumo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMA 1 -->
+    <section id="view-theme1" class="view hidden audit-bg min-h-[calc(100vh-70px)] text-slate-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-7 sm:py-10">
+        <div class="flex flex-wrap items-end justify-between gap-5 mb-7">
+          <div>
+            <div class="flex items-center gap-2 mono-label text-[10px] text-cyan-300"><span class="h-1.5 w-1.5 bg-cyan-300 rounded-full"></span> Laboratório de informação · 01</div>
+            <h1 class="mt-2 font-display text-3xl sm:text-[42px] font-extrabold tracking-[-.055em]">Confiável <span class="text-cyan-300">ou viral?</span></h1>
+            <p class="mt-2 text-sm text-slate-400">Faça uma leitura inicial. Depois, abra as pistas do dossiê.</p>
+          </div>
+          <button data-view="home" class="rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-white/5 transition">← Voltar ao hub</button>
+        </div>
+        <div class="grid lg:grid-cols-[.93fr_1.07fr] gap-5 lg:gap-6 items-start">
+          <!-- simulated post -->
+          <section class="case-window grain rounded-[30px] p-4 sm:p-5 overflow-hidden">
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <div class="mono-label text-[10px] text-cyan-200/80">A publicação sob análise</div>
+              <div class="flex gap-1.5 rounded-full bg-black/30 p-1" role="group" aria-label="Escolher publicação">
+                <button class="post-tab rounded-full px-3 py-1.5 text-[11px] font-semibold bg-cyan-200 text-slate-900" data-post="0" aria-pressed="true">Post 1</button>
+                <button class="post-tab rounded-full px-3 py-1.5 text-[11px] font-semibold text-slate-300 hover:bg-white/10" data-post="1" aria-pressed="false">Post 2</button>
+              </div>
+            </div>
+            <article class="overflow-hidden rounded-[22px] bg-white text-slate-900">
+              <div id="post-hero" class="h-[220px] sm:h-[270px] relative overflow-hidden bg-[#edc2ae]">
+                <img id="post-image" class="asset-img" src="/manus-storage/skin-example_34ba83b0.jpg" alt="Imagem ilustrativa de uma campanha de beleza com comparação visual encenada" />
+                <div id="post-image-overlay" class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15"></div>
+                <span id="post-image-label" class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur text-white px-3 py-1 text-[10px] font-semibold tracking-wide">CONTEÚDO PROMOCIONAL</span>
+                <span id="post-image-note" class="absolute bottom-4 left-4 text-[10px] text-white/80">Imagem simulada para análise crítica</span>
+              </div>
+              <div class="px-4 py-3.5">
+                <div class="flex items-center gap-2.5">
+                  <div id="post-avatar" class="h-9 w-9 rounded-full bg-gradient-to-br from-rose-300 to-amber-300 grid place-items-center text-sm">✨</div>
+                  <div class="min-w-0 flex-1"><p id="post-author" class="text-[12px] font-bold truncate">@beleza_sem_filtro</p><p id="post-location" class="text-[10px] text-slate-500">Parceria · link na bio</p></div>
+                  <button aria-label="Mais opções" class="text-xl leading-none text-slate-500">···</button>
+                </div>
+                <div class="mt-3 flex items-center gap-4 text-[13px]">
+                  <span aria-label="curtidas">♡ <b id="post-likes" class="text-[11px] font-semibold">154 mil</b></span><span aria-label="comentários">◯ <b class="text-[11px] font-semibold">2,8 mil</b></span><span class="ml-auto" aria-label="salvar">♧</span>
+                </div>
+                <p id="post-copy" class="mt-2.5 text-[12px] leading-[1.55]"></p>
+                <div id="post-disclaimer" class="mt-3 rounded-xl bg-stone-50 px-3 py-2.5 text-[10px] leading-4 text-slate-500">Exemplo fictício. A análise aqui é sobre comunicação, autoria e evidências — não sobre avaliar a aparência de ninguém.</div>
+              </div>
+            </article>
+            <div class="mt-4 flex items-start gap-3 rounded-2xl border border-cyan-100/10 bg-cyan-300/[.05] p-3.5">
+              <span class="text-cyan-300 mt-0.5">◎</span><p class="text-[11px] leading-5 text-slate-300">Curtidas são um dado de alcance. Que outras informações ajudariam você a avaliar esta publicação?</p>
+            </div>
+          </section>
+          <!-- audit desk -->
+          <div class="space-y-5">
+            <section class="audit-panel rounded-[27px] p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-4"><div><p class="mono-label text-[10px] text-slate-400">Etapa 01</p><h2 class="mt-1 font-display text-lg font-bold">Sua impressão inicial</h2></div><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-400">1 decisão</span></div>
+              <p class="mt-2 text-[12px] leading-5 text-slate-400">Não há resposta certa. Registre sua primeira leitura antes de ver o dossiê.</p>
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2" role="group" aria-label="Decisão inicial">
+                <button data-initial="confiaria" class="decision-btn rounded-xl border border-white/10 px-3 py-3 text-left text-[12px] font-semibold text-slate-300 hover:border-emerald-300/60">🟢 Confiaria</button>
+                <button data-initial="nao" class="decision-btn rounded-xl border border-white/10 px-3 py-3 text-left text-[12px] font-semibold text-slate-300 hover:border-rose-300/60">🔴 Não confiaria</button>
+                <button data-initial="verificar" class="decision-btn rounded-xl border border-white/10 px-3 py-3 text-left text-[12px] font-semibold text-slate-300 hover:border-amber-200/60">🟡 Preciso verificar</button>
+              </div>
+              <p id="initial-feedback" class="mt-3 min-h-4 text-[11px] text-cyan-200" aria-live="polite"></p>
+            </section>
+            <section class="audit-panel rounded-[27px] p-5 sm:p-6">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div><p class="mono-label text-[10px] text-slate-400">Etapa 02 · Dossiê</p><h2 class="mt-1 font-display text-lg font-bold">Abra as seis pistas</h2></div>
+                <div class="rounded-full border border-cyan-100/15 bg-cyan-100/5 px-3 py-1.5"><span id="clue-score" class="font-mono text-sm font-medium text-cyan-200">0</span><span class="text-[10px] text-slate-400"> / 6 pistas analisadas</span></div>
+              </div>
+              <p class="mt-2 text-[11px] leading-5 text-slate-400">Cada pista conta quando você a abre — independentemente da sua decisão.</p>
+              <div id="clue-list" class="mt-4 space-y-2"></div>
+              <div class="mt-4 flex items-center gap-2"><div class="h-1.5 flex-1 rounded-full bg-white/10 overflow-hidden"><div id="clue-progress" class="h-full w-0 bg-cyan-300 rounded-full transition-all duration-300"></div></div><span id="clue-progress-label" class="font-mono text-[10px] text-slate-400">0%</span></div>
+            </section>
+            <section class="audit-panel rounded-[27px] p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-4"><div><p class="mono-label text-[10px] text-slate-400">Etapa 03</p><h2 class="mt-1 font-display text-lg font-bold">Revisite sua leitura</h2></div><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-400">Após investigar</span></div>
+              <p class="mt-2 text-[12px] text-slate-400">Com o contexto em mãos, como você descreveria sua decisão agora?</p>
+              <div class="mt-4 grid grid-cols-3 gap-2" role="group" aria-label="Decisão final">
+                <button data-final="confiaria" class="decision-btn rounded-xl border border-white/10 px-2 py-3 text-[11px] font-semibold text-slate-300">🟢 Confiaria</button>
+                <button data-final="nao" class="decision-btn rounded-xl border border-white/10 px-2 py-3 text-[11px] font-semibold text-slate-300">🔴 Não confiaria</button>
+                <button data-final="verificar" class="decision-btn rounded-xl border border-white/10 px-2 py-3 text-[11px] font-semibold text-slate-300">🟡 Verificaria</button>
+              </div>
+              <label for="audit-reason" class="mt-4 block text-[11px] font-semibold text-slate-300">O que motivou sua decisão final?</label>
+              <textarea id="audit-reason" rows="2" maxlength="240" placeholder="Uma ou duas frases bastam…" class="mt-2 w-full resize-y rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-xs text-white placeholder:text-slate-500"></textarea>
+              <button id="finish-audit" class="primary-btn mt-3 w-full rounded-xl bg-cyan-300 px-4 py-3 text-xs font-bold text-slate-950 hover:bg-cyan-200 transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>Concluir reflexão</button>
+              <p id="audit-hint" class="mt-2 min-h-4 text-center text-[10px] text-slate-500" aria-live="polite">Escolha sua impressão inicial e abra as pistas para continuar.</p>
+              <div id="audit-result" class="hidden mt-4 rounded-2xl border border-cyan-200/15 bg-cyan-100/[.06] p-4 transition-in" aria-live="polite"></div>
+            </section>
+          </div>
+        </div>
+        <section class="mt-7 rounded-[26px] bg-[#f3efe4] p-5 sm:p-7 text-slate-900">
+          <div class="grid md:grid-cols-[.75fr_1.25fr] gap-6 items-start">
+            <div><span class="mono-label text-[10px] text-amber-800">Lembrete de investigação</span><h2 class="mt-2 font-display text-2xl font-extrabold tracking-[-.04em]">POPULARIDADE <span class="text-amber-700">≠</span><br />CONFIABILIDADE</h2><p class="mt-2 text-xs leading-5 text-slate-600">Curtidas e repetições mostram apenas alcance; não comprovam veracidade científica.</p></div>
+            <div>
+              <div class="flex items-center justify-between gap-3"><h3 class="font-display font-bold text-sm">Antes de compartilhar…</h3><span id="check-count" class="text-[10px] font-mono text-slate-500">0 de 7</span></div>
+              <div class="mt-3 grid sm:grid-cols-2 gap-x-5 gap-y-2.5 text-[11px]">
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Identifique quem assina o conteúdo.</span></label>
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Procure a fonte original da informação.</span></label>
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Confira a data e o contexto completo.</span></label>
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Observe se há interesse comercial envolvido.</span></label>
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Busque evidências e métodos verificáveis.</span></label>
+                <label class="check-row flex items-start gap-2.5"><input type="checkbox" class="audit-check mt-0.5" /><span>Desconfie de garantias absolutas e urgência.</span></label>
+                <label class="check-row flex items-start gap-2.5 sm:col-span-2"><input type="checkbox" class="audit-check mt-0.5" /><span>Compare com outra fonte independente antes de repassar.</span></label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <p class="py-7 text-center text-[10px] text-slate-500">Simulação educativa · Os exemplos não substituem fontes profissionais ou institucionais.</p>
+      </div>
+    </section>
+
+    <!-- TEMA 2 -->
+    <section id="view-theme2" class="view hidden social-bg min-h-[calc(100vh-70px)]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-7 sm:py-10">
+        <div class="flex flex-wrap items-end justify-between gap-5 mb-7">
+          <div><div class="flex items-center gap-2 mono-label text-[10px] text-orange-700"><span class="h-1.5 w-1.5 bg-orange-500 rounded-full"></span> Experiência de feed · 02</div><h1 class="mt-2 font-display text-3xl sm:text-[42px] font-extrabold tracking-[-.06em]">Escolha <span class="serif font-normal text-orange-600">ou influência?</span></h1><p class="mt-2 text-sm text-stone-600">Acompanhe como estímulos do ambiente podem participar de uma decisão.</p></div>
+          <button data-view="home" class="rounded-full border border-stone-300 px-4 py-2 text-xs font-semibold text-stone-600 hover:bg-white transition">← Voltar ao hub</button>
+        </div>
+        <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-5 lg:gap-6 items-start">
+          <div class="space-y-5">
+            <!-- step 1 -->
+            <section class="rounded-[28px] bg-white/80 border border-white p-5 sm:p-6 soft-shadow">
+              <div class="flex items-center gap-3"><span class="step-dot on" id="step-dot-1">1</span><div><p class="mono-label text-[10px] text-stone-400">Primeira impressão</p><h2 class="font-display text-lg font-bold">Uma situação cotidiana</h2></div></div>
+              <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Alternar cenário">
+                <button data-scenario="A" class="scenario-btn rounded-full bg-[#293a32] px-4 py-2 text-[11px] font-semibold text-white">Cenário A · Saída da faculdade</button>
+                <button data-scenario="B" class="scenario-btn rounded-full border border-stone-200 px-4 py-2 text-[11px] font-semibold text-stone-600 hover:bg-stone-50">Cenário B · Em casa à noite</button>
+              </div>
+              <div class="mt-4 rounded-2xl bg-[#f6f3ec] p-4 sm:p-5"><p id="scenario-text" class="text-[13px] sm:text-sm font-medium leading-6 text-stone-700"></p><p id="scenario-note" class="mt-1 text-[10px] text-stone-400"></p></div>
+              <div id="food-choices" class="mt-4 grid sm:grid-cols-3 gap-2.5"></div>
+              <div id="reason-area" class="hidden mt-5 border-t border-stone-100 pt-4">
+                <p class="text-xs font-bold">O que mais pesou na sua escolha neste momento?</p><p class="mt-1 text-[10px] text-stone-400">Registre um motivo, sem certo ou errado.</p>
+                <div id="reason-options" class="mt-3 flex flex-wrap gap-2"></div>
+                <button id="go-feed" class="primary-btn mt-4 rounded-xl bg-[#293a32] px-5 py-3 text-xs font-bold text-white hover:bg-[#1e2d26] transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>Avançar para o feed <span aria-hidden="true">→</span></button>
+              </div>
+            </section>
+            <!-- step 2 -->
+            <section id="step-feed" class="hidden rounded-[28px] bg-white/80 border border-white p-5 sm:p-6 soft-shadow transition-in">
+              <div class="flex items-center justify-between gap-3"><div class="flex items-center gap-3"><span class="step-dot on" id="step-dot-2">2</span><div><p class="mono-label text-[10px] text-stone-400">Exposição simulada</p><h2 class="font-display text-lg font-bold">Seu feed por alguns segundos</h2></div></div><span class="rounded-full bg-orange-50 px-3 py-1.5 text-[10px] font-bold text-orange-700">role para explorar ↓</span></div>
+              <p class="mt-3 text-[11px] leading-5 text-stone-500">Repare nos estímulos ao longo do percurso. Eles fazem parte de uma simulação, não de uma recomendação.</p>
+              <div class="phone-shell mt-4 rounded-[27px] p-2.5 sm:p-3 max-w-[600px] mx-auto">
+                <div class="rounded-t-[20px] bg-[#f8f5ef] px-4 py-3 flex items-center justify-between"><span class="font-display font-extrabold text-sm tracking-tight">para você<span class="text-orange-500">.</span></span><span class="text-[10px] text-stone-500">feed simulado · agora</span><span aria-hidden="true">♡</span></div>
+                <div id="feed-scroll" class="feed-scroll max-h-[560px] overflow-y-auto rounded-b-[20px] bg-[#f8f5ef] px-3 pb-3 space-y-3">
+                  <article class="feed-tile rounded-2xl p-4"><div class="flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-[#e5e6e0] grid place-items-center text-sm">📚</span><div><p class="text-[10px] font-bold">intervalo_produtivo</p><p class="text-[9px] text-stone-400">há 4 min · conteúdo neutro</p></div><span class="ml-auto text-stone-400">···</span></div><div class="mt-3 rounded-xl bg-[#e9eee8] min-h-[93px] flex items-center justify-center text-center p-4"><p class="font-display text-sm font-bold text-[#39473d]">eu abrindo o material<br />e lembrando de tudo, menos do conteúdo</p></div><p class="mt-2 text-[10px] text-stone-500">♡ 284 curtidas　 ↗ compartilhar</p></article>
+                  <article class="feed-tile rounded-2xl overflow-hidden"><div class="p-3 flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-violet-100 grid place-items-center">🎥</span><div><p class="text-[10px] font-bold">biaexperimentaa <span class="text-blue-500">✓</span></p><p class="text-[9px] text-stone-400">conteúdo de criador</p></div><span class="ml-auto text-stone-400">···</span></div><div class="px-4 pb-2"><div class="rounded-xl bg-gradient-to-br from-[#f3c9ac] via-[#e8b5a8] to-[#cfd2dc] h-[135px] flex items-end p-3"><span class="rounded-full bg-black/55 px-2.5 py-1.5 text-[9px] font-medium text-white">“Meu favorito de todas as noites!”</span></div><p class="mt-2 text-[10px] text-stone-500">#parceria · veja o que meus seguidores comentaram</p></div></article>
+                  <article class="feed-tile rounded-2xl overflow-hidden"><div class="p-3 flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-orange-100 grid place-items-center">⚡</span><div><p class="text-[10px] font-bold">oferta_em_destaque</p><p class="text-[9px] text-stone-400">publicidade · promoção</p></div></div><div class="relative bg-[#ff754f] px-4 py-5 text-white overflow-hidden"><span class="absolute -right-3 -top-3 text-[76px] opacity-20">✳</span><p class="relative mono-label text-[9px] text-white/80">combo relâmpago</p><p class="relative mt-1 font-display text-[23px] leading-none font-extrabold tracking-tight">De R$ 18,90<br />por R$ 12,90</p><p class="relative mt-2 text-[10px] font-semibold">Só hoje! · oferta simulada</p></div><p class="px-4 py-2.5 text-[9px] text-stone-400">Anúncio fictício usado para identificar recursos promocionais.</p></article>
+                  <article class="feed-tile rounded-2xl overflow-hidden"><div class="p-3 flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-pink-100 grid place-items-center">✦</span><div><p class="text-[10px] font-bold">vitrine_visual</p><p class="text-[9px] text-stone-400">inspiração · estilo de vida</p></div></div><div class="relative h-[185px] overflow-hidden bg-[#783e32]"><img src="/manus-storage/feed-example_61b6991f.jpg" class="asset-img" alt="Fotografia de comida utilizada como exemplo de estética publicitária"/><div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div><span class="absolute bottom-3 left-3 text-white font-display text-xl font-extrabold tracking-tight">IRRESISTÍVEL<br /><span class="text-orange-200">CREMOSO</span></span></div><p class="px-4 py-2.5 text-[9px] text-stone-400">Imagem ilustrativa. O foco está no recurso visual.</p></article>
+                  <article id="repeat-alert" class="rounded-2xl border border-orange-200 bg-[#fff1e6] p-4"><div class="flex items-start gap-3"><span class="h-8 w-8 shrink-0 rounded-full bg-orange-500 text-white grid place-items-center">↻</span><div><p class="mono-label text-[9px] text-orange-700">Padrão de repetição</p><p class="mt-1 text-[11px] font-semibold leading-5 text-[#51372b]">Notamos seu foco. O feed agora exibe 4 anúncios seguidos deste item.</p><p class="mt-2 text-[10px] leading-4 text-orange-900/70">Exposição → Interação → Recomendação → Repetição.</p></div></div></article>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-3"><p class="text-[10px] text-stone-400">Você pode rolar o feed e observar cada exemplo.</p><button id="go-reflect" class="primary-btn shrink-0 rounded-xl bg-[#293a32] px-5 py-3 text-xs font-bold text-white hover:bg-[#1e2d26] transition">Refletir sobre o percurso <span aria-hidden="true">→</span></button></div>
+            </section>
+            <!-- step 3 -->
+            <section id="step-reflect" class="hidden rounded-[28px] bg-white/80 border border-white p-5 sm:p-6 soft-shadow transition-in">
+              <div class="flex items-center gap-3"><span class="step-dot on" id="step-dot-3">3</span><div><p class="mono-label text-[10px] text-stone-400">Revisão de escolha</p><h2 class="font-display text-lg font-bold">Depois de navegar por este ambiente, você manteria sua primeira escolha?</h2></div></div>
+              <div class="mt-4 grid sm:grid-cols-2 gap-2.5" role="group" aria-label="Revisar escolha">
+                <button data-revision="keep" class="revision-btn rounded-2xl border border-stone-200 px-4 py-4 text-left hover:border-blue-300"><span class="block text-sm font-bold">🔵 Manter opção</span><span class="mt-1 block text-[10px] text-stone-400">A escolha continua a mesma</span></button>
+                <button data-revision="change" class="revision-btn rounded-2xl border border-stone-200 px-4 py-4 text-left hover:border-orange-300"><span class="block text-sm font-bold">🟡 Mudar escolha</span><span class="mt-1 block text-[10px] text-stone-400">Quero escolher outra opção</span></button>
+              </div>
+              <div id="change-choice-area" class="hidden mt-4 rounded-2xl bg-orange-50 p-4"><p class="text-[11px] font-bold">Qual opção você escolheria agora?</p><div id="second-choices" class="mt-3 grid sm:grid-cols-3 gap-2"></div></div>
+              <div class="mt-5 border-t border-stone-100 pt-4"><div class="flex flex-wrap items-end justify-between gap-2"><div><h3 class="font-display font-bold text-sm">O que chamou sua atenção?</h3><p class="mt-1 text-[10px] text-stone-400">Marque os fatores que percebeu durante o percurso.</p></div><span id="factor-count" class="font-mono text-[10px] text-stone-400">0 fatores</span></div><div id="factor-grid" class="mt-3 grid sm:grid-cols-2 gap-2"></div></div>
+              <button id="finish-theme2" class="primary-btn mt-5 w-full rounded-xl bg-[#ff765e] px-4 py-3.5 text-xs font-bold text-white hover:bg-[#f3654e] transition disabled:opacity-40 disabled:cursor-not-allowed" disabled>Ver meu painel de reflexão <span aria-hidden="true">→</span></button>
+              <p id="theme2-hint" class="mt-2 min-h-4 text-center text-[10px] text-stone-400" aria-live="polite">Compare as opções e escolha quais estímulos você reconheceu.</p>
+            </section>
+          </div>
+          <!-- reflection sidebar -->
+          <aside class="space-y-5">
+            <section class="rounded-[28px] bg-[#293a32] p-5 sm:p-6 text-white soft-shadow">
+              <div class="flex items-center justify-between"><span class="mono-label text-[10px] text-[#a8d8c0]">Mapa do percurso</span><span class="text-[10px] text-white/50">tema 2</span></div>
+              <div class="mt-5 space-y-4">
+                <div class="flex gap-3 items-start"><span class="step-dot bg-white/10 text-white" id="map-1">1</span><div><p class="text-xs font-bold">Primeira escolha</p><p id="summary-first" class="mt-1 text-[10px] text-white/55">Ainda não registrada</p></div></div>
+                <div class="ml-[13px] h-5 border-l border-dashed border-white/20"></div>
+                <div class="flex gap-3 items-start"><span class="step-dot bg-white/10 text-white" id="map-2">2</span><div><p class="text-xs font-bold">Estímulos no feed</p><p class="mt-1 text-[10px] text-white/55">Criador · promoção · estética · repetição</p></div></div>
+                <div class="ml-[13px] h-5 border-l border-dashed border-white/20"></div>
+                <div class="flex gap-3 items-start"><span class="step-dot bg-white/10 text-white" id="map-3">3</span><div><p class="text-xs font-bold">Nova leitura</p><p id="summary-second" class="mt-1 text-[10px] text-white/55">A reflexão vem depois do feed</p></div></div>
+              </div>
+              <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-3.5"><p class="text-[10px] leading-5 text-white/65"><span class="font-bold text-white">Importante:</span> este percurso não avalia alimentos nem escolhas pessoais. O objeto de observação é o ambiente de influência.</p></div>
+            </section>
+            <section id="final-dashboard" class="hidden rounded-[28px] bg-white border border-white p-5 sm:p-6 soft-shadow transition-in">
+              <div class="flex items-center justify-between gap-3"><div><p class="mono-label text-[10px] text-orange-600">Seu registro · tema 2</p><h2 class="mt-1 font-display text-xl font-extrabold tracking-tight">Painel de reflexão</h2></div><span class="rounded-full bg-orange-50 px-3 py-1.5 text-[10px] font-bold text-orange-700">sem julgamento</span></div>
+              <div class="mt-5 grid grid-cols-2 gap-2.5"><div class="rounded-2xl bg-[#f4f1eb] p-3.5"><p class="mono-label text-[8px] text-stone-400">1ª escolha</p><p id="dash-first" class="mt-2 text-[12px] font-bold"></p><p id="dash-reason" class="mt-1 text-[10px] text-stone-500"></p></div><div class="rounded-2xl bg-[#fff0e9] p-3.5"><p class="mono-label text-[8px] text-orange-500">2ª escolha</p><p id="dash-second" class="mt-2 text-[12px] font-bold"></p><p id="dash-change" class="mt-1 text-[10px] text-stone-500"></p></div></div>
+              <div class="mt-4 rounded-2xl bg-[#293a32] p-4 text-white"><div class="flex items-end justify-between gap-3"><div><p class="mono-label text-[9px] text-[#a8d8c0]">Score crítico de autonomia</p><p class="mt-1 text-[10px] text-white/55">Fatores de influência reconhecidos</p></div><p class="font-display text-[34px] leading-none font-extrabold"><span id="critical-score">0</span><span class="text-base text-white/45"> / 7</span></p></div><div class="mt-3 h-1.5 overflow-hidden rounded-full bg-white/15"><div id="critical-progress" class="h-full w-0 rounded-full bg-[#ff9178] transition-all duration-500"></div></div></div>
+              <div class="mt-4 space-y-2"><p class="mono-label text-[9px] text-stone-400">Sinais que você identificou</p><div id="recognized-list" class="flex flex-wrap gap-1.5"></div></div>
+              <div class="mt-5 grid sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-stone-100 p-3.5"><span class="text-lg">⌘</span><p class="mt-2 text-[11px] font-bold">Computação</p><p class="mt-1 text-[10px] leading-4 text-stone-500">Sinais de clique podem alimentar ciclos de repetição algorítmica.</p></div>
+                <div class="rounded-2xl border border-stone-100 p-3.5"><span class="text-lg">✳</span><p class="mt-2 text-[11px] font-bold">Estética</p><p class="mt-1 text-[10px] leading-4 text-stone-500">Luz, cor e padrões visuais podem produzir desejo imediato.</p></div>
+              </div>
+              <blockquote class="mt-5 border-l-2 border-orange-400 pl-4 py-1 font-display text-[18px] leading-6 font-bold tracking-tight text-stone-800">“Quanto da nossa escolha é espontânea e quanto é influenciada pelo ambiente digital?”</blockquote>
+              <button id="restart-theme2" class="mt-5 w-full rounded-xl border border-stone-200 px-4 py-3 text-xs font-bold text-stone-600 hover:bg-stone-50 transition">Recomeçar este percurso</button>
+            </section>
+            <section class="rounded-[26px] border border-stone-200 bg-[#faf8f3] p-5">
+              <span class="mono-label text-[9px] text-stone-400">Uma pergunta para levar</span><p class="mt-3 font-display text-[20px] font-bold leading-6 tracking-tight">O que o feed escolheu mostrar <span class="serif text-orange-600">— e o que ficou de fora?</span></p><div class="mt-4 h-px bg-stone-200"></div><p class="mt-3 text-[10px] leading-5 text-stone-500">Perceber o contexto é parte do exercício. Seu ritmo e sua reflexão pertencem a você.</p>
+            </section>
+          </aside>
+        </div>
+        <p class="py-7 text-center text-[10px] text-stone-400">Simulação educativa · Nenhuma escolha ou alimento é classificado como certo ou errado.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  (() => {
+    'use strict';
+    const $ = (selector, root=document) => root.querySelector(selector);
+    const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+
+    // Navegação compartilhada; os estados dos temas permanecem em objetos independentes.
+    const views = {home:$('#view-home'), theme1:$('#view-theme1'), theme2:$('#view-theme2')};
+    function showView(name){
+      Object.entries(views).forEach(([key,el]) => el.classList.toggle('hidden', key !== name));
+      $$('[data-view]').forEach(btn => { if(btn.classList.contains('nav-link')) { if(btn.dataset.view===name) btn.setAttribute('aria-current','page'); else btn.removeAttribute('aria-current'); } });
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    $$('[data-view]').forEach(btn => btn.addEventListener('click', () => showView(btn.dataset.view)));
+
+    // TEMA 1 — auditoria; score depende somente de pistas reveladas.
+    const auditState = {post:0, initial:null, final:null, revealed:new Set()};
+    const auditPosts = [
+      {author:'@beleza_sem_filtro',location:'Parceria · link na bio',likes:'154 mil',avatar:'✨',label:'CONTEÚDO PROMOCIONAL',image:'/manus-storage/skin-example_34ba83b0.jpg',imageAlt:'Imagem ilustrativa de uma campanha de beleza com comparação visual encenada',note:'Imagem simulada para análise crítica',copy:'✨ <b>PELE PERFEITA EM 7 DIAS!</b> Cansada de gastar dinheiro? Descobri o segredo! Funciona para todo mundo! Resultado garantido, 100% seguro! Link na bio!',disclaimer:'Exemplo fictício. A análise aqui é sobre comunicação, autoria e evidências — não sobre avaliar a aparência de ninguém.'},
+      {author:'@instituicao_de_saude',location:'Informação institucional · 2026',likes:'1.204',avatar:'＋',label:'INFORMAÇÃO INSTITUCIONAL',image:'',imageAlt:'Cartão institucional ilustrativo sobre cuidado e verificação de fontes',note:'Cartão institucional simulado · fonte citada sem link',copy:'🌿 <b>CUIDADO COM A PELE:</b> Manter rotina de cuidados faz parte do autocuidado. Antes de seguir recomendações, verifique a origem, finalidade e segurança. Fonte: Instituição de Saúde. Data: 2026.',disclaimer:'Exemplo fictício. Mesmo uma publicação sóbria pode ser investigada: procure autoria identificável, contexto e a fonte original.'}
+    ];
+    const clueData = [
+      [
+        ['Autoria','Perfil de influenciadora de beleza; sem registro técnico ou formação em saúde.'],
+        ['Fonte','Não há pesquisa, artigo científico ou órgão regulador citado.'],
+        ['Publicidade','Há link de afiliado e interesse financeiro por venda.'],
+        ['Promessas','Uso de termos como “segredo”, “resultado garantido” e “100% seguro”.'],
+        ['Evidências','Apenas foto de “antes/depois”, sem metodologia nem controle.'],
+        ['Linguagem','Expressões apelativas e gatilhos de urgência (“Últimas unidades”).']
+      ],
+      [
+        ['Autoria','A publicação declara origem institucional; vale identificar a pessoa ou equipe responsável.'],
+        ['Fonte','“Instituição de Saúde” é uma referência genérica; não há artigo, documento ou link original.'],
+        ['Publicidade','Este trecho não informa se há patrocínio ou interesse comercial; o contexto pode ser verificado.'],
+        ['Promessas','Não há promessa de resultado garantido; a linguagem é moderada.'],
+        ['Evidências','A mensagem é geral e não apresenta pesquisa ou método específico para conferir.'],
+        ['Linguagem','Não aparecem gatilhos de urgência; observe data, contexto e intenção da publicação.']
+      ]
+    ];
+    function renderPost(){
+      const post=auditPosts[auditState.post];
+      $('#post-author').textContent=post.author; $('#post-location').textContent=post.location; $('#post-likes').textContent=post.likes;
+      $('#post-avatar').textContent=post.avatar; $('#post-image-label').textContent=post.label; $('#post-image-note').textContent=post.note; $('#post-copy').innerHTML=post.copy; $('#post-disclaimer').textContent=post.disclaimer;
+      const img=$('#post-image'), hero=$('#post-hero'), overlay=$('#post-image-overlay');
+      if(post.image){img.src=post.image;img.alt=post.imageAlt;img.classList.remove('hidden');overlay.classList.remove('hidden');$('#post-image-note').classList.remove('hidden');}
+      else {img.removeAttribute('src');img.classList.add('hidden');overlay.classList.add('hidden');$('#post-image-note').classList.add('hidden');hero.style.background='radial-gradient(circle at 75% 35%,rgba(108,205,167,.36),transparent 28%),linear-gradient(145deg,#e8efe5,#c8d9d0 52%,#8eb9a4)';}
+      $$('.post-tab').forEach(b=>{const active=Number(b.dataset.post)===auditState.post;b.setAttribute('aria-pressed',String(active));b.className=`post-tab rounded-full px-3 py-1.5 text-[11px] font-semibold ${active?'bg-cyan-200 text-slate-900':'text-slate-300 hover:bg-white/10'}`;});
+      renderClues();
+    }
+    function renderClues(){
+      $('#clue-list').innerHTML=clueData[auditState.post].map(([title,text],i)=>{
+        const open=auditState.revealed.has(i);
+        return `<article class="clue-card ${open?'is-open':''} rounded-2xl border ${open?'border-cyan-200/20 bg-cyan-200/[.045]':'border-white/10 bg-black/10'} p-3.5"><div class="flex items-start gap-3"><span class="mt-0.5 h-7 w-7 shrink-0 rounded-lg ${open?'bg-cyan-200/15 text-cyan-200':'bg-white/5 text-slate-500'} grid place-items-center font-mono text-[10px]">0${i+1}</span><div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-2"><h3 class="text-[11px] font-bold text-slate-200">${title}</h3><button data-reveal="${i}" class="shrink-0 rounded-full border ${open?'border-cyan-200/20 text-cyan-200':'border-white/10 text-slate-400 hover:text-white'} px-2.5 py-1 text-[9px] font-semibold">${open?'Analisada ✓':'Revelar pista'}</button></div><p class="clue-blur mt-1.5 text-[11px] leading-5 text-slate-400">${text}</p></div></div></article>`;
+      }).join('');
+      $$('[data-reveal]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.reveal);auditState.revealed.add(i);renderClues();updateAudit();}));
+      const count=auditState.revealed.size;$('#clue-score').textContent=count;$('#clue-progress').style.width=`${count/6*100}%`;$('#clue-progress-label').textContent=`${Math.round(count/6*100)}%`;
+    }
+    $$('.post-tab').forEach(b=>b.addEventListener('click',()=>{auditState.post=Number(b.dataset.post);auditState.initial=null;auditState.final=null;auditState.revealed.clear();$$('[data-initial],[data-final]').forEach(x=>x.classList.remove('is-selected'));$('#audit-reason').value='';$('#initial-feedback').textContent='';$('#audit-result').classList.add('hidden');renderPost();updateAudit();}));
+    $$('[data-initial]').forEach(b=>b.addEventListener('click',()=>{auditState.initial=b.dataset.initial;$$('[data-initial]').forEach(x=>x.classList.toggle('is-selected',x===b));$('#initial-feedback').textContent='Impressão inicial registrada. Agora, investigue o dossiê.';updateAudit();}));
+    $$('[data-final]').forEach(b=>b.addEventListener('click',()=>{auditState.final=b.dataset.final;$$('[data-final]').forEach(x=>x.classList.toggle('is-selected',x===b));updateAudit();}));
+    function updateAudit(){
+      const ready=!!auditState.initial&&auditState.revealed.size===6&&!!auditState.final;
+      $('#finish-audit').disabled=!ready;
+      $('#audit-hint').textContent=!auditState.initial?'Escolha sua impressão inicial e abra as pistas para continuar.':auditState.revealed.size<6?`Abra as ${6-auditState.revealed.size} pista(s) restante(s) para concluir a reflexão.`:!auditState.final?'Registre sua decisão após investigar o dossiê.':'Pronto para registrar sua reflexão.';
+    }
+    $('#finish-audit').addEventListener('click',()=>{
+      if($('#finish-audit').disabled)return;
+      const labels={confiaria:'Confiaria',nao:'Não confiaria',verificar:'Preciso verificar'};
+      const reason=$('#audit-reason').value.trim();
+      $('#audit-result').innerHTML=`<p class="mono-label text-[9px] text-cyan-200">Registro concluído · ${auditState.revealed.size} de 6 pistas analisadas</p><p class="mt-2 text-sm font-bold">Impressão inicial: ${labels[auditState.initial]} <span class="text-slate-500">→</span> após investigar: ${labels[auditState.final]}</p><p class="mt-2 text-[11px] leading-5 text-slate-300">${reason?`Sua justificativa: “${escapeHTML(reason)}”`:'Você concluiu a investigação. A justificativa é opcional e sua reflexão continua válida.'}</p><p class="mt-3 border-t border-white/10 pt-3 text-[10px] leading-4 text-slate-400">Este marcador conta pistas abertas, não acertos nem escolhas. Compare a autoria, a fonte, o contexto comercial, as promessas, as evidências e a linguagem.</p>`;
+      $('#audit-result').classList.remove('hidden');
+    });
+    $$('.audit-check').forEach(c=>c.addEventListener('change',()=>{$('#check-count').textContent=`${$$('.audit-check:checked').length} de 7`;}));
+
+    // TEMA 2 — estado independente: cenários, escolhas e fatores percebidos.
+    const theme2State={scenario:'A',first:null,reason:null,revision:null,second:null,checked:new Set()};
+    const scenarios={
+      A:{text:'Você está saindo da faculdade às 18h30. Está com fome e tem R$ 15,00. Qual opção chama mais sua atenção?',note:'As opções são elementos de um cenário fictício para refletir sobre estímulos.',options:['🥪 Sanduíche natural','🍫 Barra de chocolate + bebida','🍟 Salgadinho + refrigerante']},
+      B:{text:'Você está em casa à noite assistindo a uma série. Aparece uma propaganda no intervalo.',note:'Observe a situação e registre a opção que primeiro chama sua atenção.',options:['🍿 Pipoca','🍪 Biscoito recheado','🥤 Bebida pronta']}
+    };
+    const motives=['Preço','Fome','Praticidade','Hábito','Aparência/Vontade'];
+    const factors=[['price','Preço'],['promotion','Promoção'],['packaging','Embalagem'],['appearance','Aparência'],['influencer','Influenciador'],['comments','Comentários'],['repetition','Repetição'],['convenience','Praticidade'],['habit','Costume'],['curiosity','Curiosidade'],['advertising','Publicidade'],['recommendation','Recomendação do feed']];
+    function renderScenario(){
+      const scenario=scenarios[theme2State.scenario];$('#scenario-text').textContent=scenario.text;$('#scenario-note').textContent=scenario.note;
+      $$('.scenario-btn').forEach(b=>{const active=b.dataset.scenario===theme2State.scenario;b.className=`scenario-btn rounded-full px-4 py-2 text-[11px] font-semibold ${active?'bg-[#293a32] text-white':'border border-stone-200 text-stone-600 hover:bg-white'}`;});
+      $('#food-choices').innerHTML=scenario.options.map((label,i)=>`<button data-first="${i}" class="choice-btn rounded-2xl border ${theme2State.first===i?'border-orange-400 bg-orange-50 ring-2 ring-orange-100':'border-stone-200 bg-white hover:border-orange-300'} p-3.5 text-left"><span class="text-[12px] font-bold leading-5">${label}</span><span class="mt-1 block text-[9px] ${theme2State.first===i?'text-orange-700':'text-stone-400'}">${theme2State.first===i?'Selecionada':'Uma opção possível'}</span></button>`).join('');
+      $$('[data-first]').forEach(b=>b.addEventListener('click',()=>{theme2State.first=Number(b.dataset.first);theme2State.reason=null;renderScenario();$('#reason-area').classList.remove('hidden');renderReasons();$('#summary-first').textContent=scenario.options[theme2State.first];$('#map-1').className='step-dot done';}));
+    }
+    function renderReasons(){
+      $('#reason-options').innerHTML=motives.map(m=>`<button data-reason="${m}" class="reason-btn rounded-full border ${theme2State.reason===m?'border-orange-400 bg-orange-100 text-orange-800':'border-stone-200 bg-white text-stone-600 hover:border-orange-300'} px-3 py-2 text-[10px] font-semibold">${m}</button>`).join('');
+      $$('[data-reason]').forEach(b=>b.addEventListener('click',()=>{theme2State.reason=b.dataset.reason;renderReasons();$('#go-feed').disabled=false;}));
+    }
+    $$('.scenario-btn').forEach(b=>b.addEventListener('click',()=>{
+      theme2State.scenario=b.dataset.scenario;theme2State.first=null;theme2State.reason=null;theme2State.revision=null;theme2State.second=null;theme2State.checked.clear();
+      $('#reason-area').classList.add('hidden');$('#step-feed').classList.add('hidden');$('#step-reflect').classList.add('hidden');$('#final-dashboard').classList.add('hidden');$('#go-feed').disabled=true;$('#finish-theme2').disabled=true;$('#theme2-hint').textContent='Compare as opções e escolha quais estímulos você reconheceu.';$('#factor-count').textContent='0 fatores';$$('[data-factor]').forEach(c=>{c.checked=false;c.closest('label').classList.remove('border-orange-200','bg-orange-50');});$$('.revision-btn').forEach(x=>x.className='revision-btn rounded-2xl border border-stone-200 px-4 py-4 text-left hover:border-blue-300');$('#summary-first').textContent='Ainda não registrada';$('#summary-second').textContent='A reflexão vem depois do feed';$('#map-1').className='step-dot bg-white/10 text-white';$('#map-2').className='step-dot bg-white/10 text-white';$('#map-3').className='step-dot bg-white/10 text-white';$('#step-dot-1').className='step-dot on';$('#step-dot-2').className='step-dot bg-white/10 text-white';$('#step-dot-3').className='step-dot bg-white/10 text-white';renderScenario();
+    }));
+    $('#go-feed').addEventListener('click',()=>{if(!theme2State.reason)return;$('#step-feed').classList.remove('hidden');$('#step-feed').scrollIntoView({behavior:'smooth',block:'start'});$('#map-2').className='step-dot on';$('#summary-first').textContent=`${scenarios[theme2State.scenario].options[theme2State.first]} · motivo: ${theme2State.reason}`;});
+    $('#go-reflect').addEventListener('click',()=>{$('#step-reflect').classList.remove('hidden');$('#step-reflect').scrollIntoView({behavior:'smooth',block:'start'});$('#step-dot-2').className='step-dot done';$('#step-dot-3').className='step-dot on';$('#map-2').className='step-dot done';});
+    $$('[data-revision]').forEach(b=>b.addEventListener('click',()=>{
+      theme2State.revision=b.dataset.revision;theme2State.second=theme2State.revision==='keep'?theme2State.first:null;
+      $$('.revision-btn').forEach(x=>x.className=`revision-btn rounded-2xl border px-4 py-4 text-left ${x===b?'border-orange-400 bg-orange-50':'border-stone-200 hover:border-orange-300'}`);
+      if(theme2State.revision==='change'){$('#change-choice-area').classList.remove('hidden');renderSecondChoices();$('#theme2-hint').textContent='Escolha uma opção para concluir a comparação.';}
+      else{$('#change-choice-area').classList.add('hidden');$('#theme2-hint').textContent='Marque os estímulos reconhecidos para gerar seu painel.';}
+      updateTheme2Finish();$('#summary-second').textContent=theme2State.revision==='keep'?'Você pretende manter a opção':'Você considera outra opção';$('#map-3').className='step-dot on';
+    }));
+    function renderSecondChoices(){
+      const options=scenarios[theme2State.scenario].options;
+      $('#second-choices').innerHTML=options.map((label,i)=>`<button data-second="${i}" class="choice-btn rounded-xl border ${theme2State.second===i?'border-orange-400 bg-white ring-2 ring-orange-100':'border-orange-100 bg-white/65 hover:border-orange-300'} p-3 text-left text-[10px] font-semibold">${label}</button>`).join('');
+      $$('[data-second]').forEach(b=>b.addEventListener('click',()=>{theme2State.second=Number(b.dataset.second);renderSecondChoices();$('#summary-second').textContent=options[theme2State.second];$('#theme2-hint').textContent='Marque os estímulos reconhecidos para gerar seu painel.';updateTheme2Finish();}));
+    }
+    $('#factor-grid').innerHTML=factors.map(([id,label])=>`<label class="factor-row flex items-center gap-2.5 rounded-xl border ${theme2State.checked.has(id)?'border-orange-200 bg-orange-50':'border-stone-100 bg-white'} px-3 py-2.5 text-[10px] font-medium text-stone-600 hover:border-orange-200 transition"><input type="checkbox" data-factor="${id}" ${theme2State.checked.has(id)?'checked':''}/><span>${label}</span></label>`).join('');
+    $$('[data-factor]').forEach(c=>c.addEventListener('change',()=>{if(c.checked)theme2State.checked.add(c.dataset.factor);else theme2State.checked.delete(c.dataset.factor);c.closest('label').classList.toggle('border-orange-200',c.checked);c.closest('label').classList.toggle('bg-orange-50',c.checked);$('#factor-count').textContent=`${theme2State.checked.size} ${theme2State.checked.size===1?'fator':'fatores'}`;updateTheme2Finish();}));
+    function updateTheme2Finish(){const ready=theme2State.revision==='keep'?theme2State.second!==null:theme2State.revision==='change'&&theme2State.second!==null;$('#finish-theme2').disabled=!ready;}
+    $('#finish-theme2').addEventListener('click',()=>{
+      if($('#finish-theme2').disabled)return;
+      const s=theme2State.checked;
+      const triggers=[
+        ['Influenciador',s.has('influencer')],
+        ['Preço e promoção',s.has('price')||s.has('promotion')],
+        ['Estética visual',s.has('appearance')||s.has('packaging')],
+        ['Repetição',s.has('repetition')],
+        ['Algoritmo',s.has('recommendation')],
+        ['Justificativa percebida',!!theme2State.reason||s.has('comments')||s.has('convenience')||s.has('habit')||s.has('curiosity')],
+        ['Publicidade',s.has('advertising')]
+      ];
+      const score=triggers.filter(([,hit])=>hit).length;
+      const options=scenarios[theme2State.scenario].options;
+      $('#dash-first').textContent=options[theme2State.first];$('#dash-reason').textContent=`Motivo inicial: ${theme2State.reason}`;
+      $('#dash-second').textContent=options[theme2State.second];$('#dash-change').textContent=theme2State.second===theme2State.first?'Você registrou a opção inicial novamente.':'Você registrou uma opção diferente.';
+      $('#critical-score').textContent=score;$('#critical-progress').style.width=`${score/7*100}%`;
+      const recognized=triggers.filter(([,hit])=>hit).map(([name])=>name);
+      $('#recognized-list').innerHTML=recognized.length?recognized.map(name=>`<span class="rounded-full bg-[#e9f0e9] px-2.5 py-1.5 text-[9px] font-semibold text-[#355242]">${name}</span>`).join(''):'<span class="text-[10px] text-stone-400">Nenhum dos sete gatilhos foi marcado neste momento — a observação não se transforma em nota.</span>';
+      $('#final-dashboard').classList.remove('hidden');$('#step-dot-3').className='step-dot done';$('#map-3').className='step-dot done';$('#final-dashboard').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    $('#restart-theme2').addEventListener('click',()=>{
+      theme2State.scenario='A';theme2State.first=null;theme2State.reason=null;theme2State.revision=null;theme2State.second=null;theme2State.checked.clear();
+      $('#reason-area').classList.add('hidden');$('#step-feed').classList.add('hidden');$('#step-reflect').classList.add('hidden');$('#final-dashboard').classList.add('hidden');$('#factor-count').textContent='0 fatores';$$('[data-factor]').forEach(c=>{c.checked=false;c.closest('label').classList.remove('border-orange-200','bg-orange-50');});$$('.revision-btn').forEach(x=>x.className='revision-btn rounded-2xl border border-stone-200 px-4 py-4 text-left hover:border-blue-300');$('#summary-first').textContent='Ainda não registrada';$('#summary-second').textContent='A reflexão vem depois do feed';$('#map-1').className='step-dot bg-white/10 text-white';$('#map-2').className='step-dot bg-white/10 text-white';$('#map-3').className='step-dot bg-white/10 text-white';$('#step-dot-1').className='step-dot on';$('#step-dot-2').className='step-dot on';$('#step-dot-3').className='step-dot on';$('#go-feed').disabled=true;renderScenario();window.scrollTo({top:0,behavior:'smooth'});
+    });
+    function escapeHTML(value){return value.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));}
+
+    renderPost();renderScenario();
+  })();
+  </script>
+</body>
+</html>
